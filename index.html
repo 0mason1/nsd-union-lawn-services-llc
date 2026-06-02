@@ -1,750 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Union Lawn Services LLC | Professional Landscaping in Charlotte, NC</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Union Lawn Services LLC | Landscaping | Charlotte, NC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;color:#111;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
 
-    :root {
-      --green: #3a7d44;
-      --green-dark: #2c5f34;
-      --green-light: #4e9e5a;
-      --gold: #f5b800;
-      --dark: #111;
-      --gray: #f7f7f5;
-      --text: #333;
-      --muted: #777;
-    }
+/* Banner */
+#top-banner{background:#111;color:#fff;text-align:center;padding:8px 16px;font-size:12px;letter-spacing:.04em;position:relative;z-index:1000}
+#top-banner a{color:#c9a84c;text-decoration:underline}
+#close-banner{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;cursor:pointer;font-size:16px;line-height:1}
 
-    html { scroll-behavior: smooth; }
+/* Nav */
+nav{position:fixed;top:36px;left:0;right:0;z-index:999;padding:20px 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
+nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(12px);top:0;padding:14px 5%}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:#fff;font-weight:700}
+.nav-logo span{color:#c9a84c}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.85);font-size:14px;font-weight:500;letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:#c9a84c;color:#fff !important;padding:10px 22px;border-radius:3px;font-weight:600 !important;letter-spacing:.06em !important;font-size:13px !important}
+.nav-phone{color:#fff !important;font-weight:600 !important}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      color: var(--text);
-      overflow-x: hidden;
-    }
+/* Hero */
+#hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');background-size:cover;background-position:center;animation:zoomIn 12s ease-in-out infinite alternate}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.4) 60%,rgba(0,0,0,.7) 100%)}
+@keyframes zoomIn{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero-content{position:relative;z-index:2;padding:0 20px;max-width:860px}
+.hero-tag{display:inline-block;background:#c9a84c;color:#fff;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:2px;margin-bottom:24px}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,4rem);color:#fff;line-height:1.15;margin-bottom:20px}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.85);max-width:560px;margin:0 auto 36px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:#c9a84c;color:#fff;padding:15px 32px;font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;border-radius:3px;cursor:pointer;border:none;transition:opacity .2s}
+.btn-primary:hover{opacity:.88}
+.btn-secondary{background:transparent;color:#fff;padding:15px 32px;font-weight:600;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.6);border-radius:3px;cursor:pointer;transition:all .2s}
+.btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 
-    /* PROMO BANNER */
-    #promo-banner {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      font-size: 0.78rem;
-      padding: 8px 1rem;
-      letter-spacing: 0.03em;
-      position: relative;
-      z-index: 1001;
-    }
-    #promo-banner a {
-      color: #a8d5b0;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    #promo-banner a:hover { text-decoration: underline; }
+/* Trust bar */
+.trust-bar{background:#111;padding:32px 5%;display:flex;justify-content:center;gap:80px;flex-wrap:wrap}
+.trust-item{text-align:center;color:#fff}
+.trust-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:#c9a84c;font-weight:700}
+.trust-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 33px;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 1.2rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, padding 0.3s ease;
-    }
-    nav.scrolled {
-      background: rgba(10,20,10,0.82);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 2px 30px rgba(0,0,0,0.25);
-      padding: 0.85rem 2.5rem;
-    }
-    .nav-logo {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
-    .nav-logo span:first-child {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.01em;
-    }
-    .nav-logo span:last-child {
-      font-size: 0.7rem;
-      color: #a8d5b0;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      color: rgba(255,255,255,0.85);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: #fff; }
-    .nav-phone {
-      color: #a8d5b0 !important;
-      font-weight: 600 !important;
-    }
-    .nav-cta {
-      background: var(--green);
-      color: #fff !important;
-      padding: 0.55rem 1.3rem;
-      border-radius: 4px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-      cursor: pointer;
-    }
-    .nav-cta:hover { background: var(--green-light) !important; color: #fff !important; }
+/* Services */
+.services{padding:90px 5%;background:#fafafa}
+.section-tag{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:#111;margin-bottom:48px;max-width:520px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.service-card{background:#fff;border:1px solid #eee;border-radius:6px;padding:32px;transition:all .25s;cursor:pointer}
+.service-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.08);transform:translateY(-3px)}
+.service-icon{width:44px;height:44px;background:#c9a84c;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:#fff;font-size:18px}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:10px}
+.service-card p{font-size:14px;color:#666;line-height:1.7}
+.service-link{font-size:13px;font-weight:600;color:#c9a84c;margin-top:14px;display:inline-block;letter-spacing:.04em}
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      min-height: 650px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: -10%;
-      background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&auto=format&fit=crop&q=80') center/cover no-repeat;
-      animation: heroZoom 18s ease-in-out infinite alternate;
-      z-index: 0;
-    }
-    @keyframes heroZoom {
-      from { transform: scale(1); }
-      to { transform: scale(1.12); }
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(160deg, rgba(5,20,8,0.72) 0%, rgba(10,35,14,0.65) 60%, rgba(0,0,0,0.55) 100%);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 0 1.5rem;
-      max-width: 820px;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(58,125,68,0.35);
-      border: 1px solid rgba(168,213,176,0.4);
-      color: #a8d5b0;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.4rem 1.1rem;
-      border-radius: 50px;
-      margin-bottom: 1.5rem;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 6vw, 4.8rem);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 1.2rem;
-      text-shadow: 0 2px 30px rgba(0,0,0,0.4);
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: #a8d5b0;
-    }
-    .hero p {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      max-width: 560px;
-      margin: 0 auto 2.2rem;
-      line-height: 1.7;
-      font-weight: 300;
-    }
-    .hero-btns {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      background: var(--green);
-      color: #fff;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.25s, transform 0.2s;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .btn-primary:hover { background: var(--green-light); transform: translateY(-2px); }
-    .btn-outline {
-      background: transparent;
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.5);
-      padding: 1rem 2rem;
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: border-color 0.25s, background 0.25s;
-      font-family: 'DM Sans', sans-serif;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-    }
-    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .scroll-arrow {
-      width: 24px;
-      height: 24px;
-      border-right: 2px solid rgba(255,255,255,0.4);
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      transform: rotate(45deg);
-      animation: bounce 1.8s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(6px); }
-    }
+/* About */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.about-img{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');background-size:cover;background-position:center}
+.about-text{padding:80px 6%;display:flex;flex-direction:column;justify-content:center;background:#fff}
+.about-text p{font-size:15px;color:#555;line-height:1.85;margin-bottom:16px}
+.about-check{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+.about-check .check{width:22px;height:22px;background:#c9a84c;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:#fff;font-size:12px}
+.about-check p{margin:0;font-size:14px;color:#444}
 
-    /* TRUST BAR */
-    .trust-bar {
-      background: var(--dark);
-      padding: 2.8rem 2rem;
-    }
-    .trust-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      text-align: center;
-    }
-    .trust-item {
-      padding: 1rem;
-      border-right: 1px solid rgba(255,255,255,0.1);
-    }
-    .trust-item:last-child { border-right: none; }
-    .trust-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      color: #a8d5b0;
-      line-height: 1;
-      margin-bottom: 0.35rem;
-    }
-    .trust-label {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
+/* Reviews */
+.reviews{padding:90px 5%;background:#111}
+.reviews .section-tag{color:#c9a84c}
+.reviews .section-title{color:#fff}
+.reviews-note{font-size:13px;color:rgba(255,255,255,.4);margin-top:-32px;margin-bottom:48px}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:28px}
+.stars{color:#c9a84c;font-size:16px;margin-bottom:14px;letter-spacing:2px}
+.review-text{font-size:14px;color:rgba(255,255,255,.8);line-height:1.75;margin-bottom:18px;font-style:italic}
+.reviewer{font-size:13px;font-weight:600;color:#fff}
+.reviewer-loc{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px}
 
-    /* SERVICES */
-    .services {
-      background: var(--gray);
-      padding: 6rem 2rem;
-    }
-    .section-header {
-      text-align: center;
-      max-width: 620px;
-      margin: 0 auto 3.5rem;
-    }
-    .section-tag {
-      display: inline-block;
-      color: var(--green);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-    }
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-    .section-header p {
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 2.2rem;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-bottom: 3px solid transparent;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-      border-bottom-color: var(--green);
-    }
-    .service-icon {
-      font-size: 2.4rem;
-      margin-bottom: 1.1rem;
-      display: block;
-    }
-    .service-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 0.7rem;
-    }
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-    }
-    .service-link {
-      color: var(--green);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: gap 0.2s;
-      background: none;
-      border: none;
-      font-family: 'DM Sans', sans-serif;
-      padding: 0;
-    }
-    .service-link:hover { gap: 0.6rem; }
+/* Contact */
+.contact{padding:90px 5%;background:#fafafa;text-align:center}
+.contact .section-title{margin:0 auto 12px}
+.contact p{font-size:15px;color:#666;margin-bottom:36px}
+.contact-phone{font-family:'Playfair Display',serif;font-size:2rem;color:#111;font-weight:700;display:block;margin-bottom:24px}
+.contact-phone:hover{color:#c9a84c}
 
-    /* ABOUT */
-    .about {
-      padding: 6rem 2rem;
-      background: #fff;
-    }
-    .about-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .about-image {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .about-image img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-      border-radius: 8px;
-    }
-    .about-badge {
-      position: absolute;
-      bottom: 2rem;
-      right: -1.5rem;
-      background: var(--green);
-      color: #fff;
-      padding: 1.2rem 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-    }
-    .about-badge strong {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      display: block;
-      line-height: 1;
-    }
-    .about-badge span {
-      font-size: 0.75rem;
-      opacity: 0.85;
-      letter-spacing: 0.05em;
-    }
-    .about-text .section-tag { margin-bottom: 0.8rem; }
-    .about-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3vw, 2.6rem);
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
-    }
-    .about-text p {
-      color: var(--muted);
-      font-size: 0.97rem;
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-    .about-list {
-      list-style: none;
-      margin: 1.5rem 0 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-    .about-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-size: 0.93rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-    .about-list li::before {
-      content: '';
-      width: 20px;
-      height: 20px;
-      background: #e8f5ea;
-      border-radius: 50%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%233a7d44'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
-      background-size: 14px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+/* Footer */
+footer{background:#0a0a0a;padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:#fff;font-weight:700}
+.footer-logo span{color:#c9a84c}
+footer p{font-size:12px;color:rgba(255,255,255,.3)}
 
-    /* REVIEWS */
-    .reviews {
-      background: #111;
-      padding: 6rem 2rem;
-    }
-    .reviews .section-header h2 { color: #fff; }
-    .reviews .section-header p { color: rgba(255,255,255,0.5); }
-    .reviews-note {
-      text-align: center;
-      color: rgba(255,255,255,0.35);
-      font-size: 0.78rem;
-      margin-top: -2.5rem;
-      margin-bottom: 3rem;
-      letter-spacing: 0.02em;
-    }
-    .reviews-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .review-card {
-      background: #1a1a1a;
-      border-radius: 8px;
-      padding: 2rem;
-      border: 1px solid rgba(255,255,255,0.07);
-      transition: border-color 0.3s;
-    }
-    .review-card:hover { border-color: rgba(168,213,176,0.25); }
-    .stars {
-      display: flex;
-      gap: 3px;
-      margin-bottom: 1.1rem;
-    }
-    .stars span {
-      color: var(--gold);
-      font-size: 1.1rem;
-    }
-    .review-text {
-      color: rgba(255,255,255,0.75);
-      font-size: 0.93rem;
-      line-height: 1.75;
-      margin-bottom: 1.3rem;
-      font-style: italic;
-    }
-    .review-text::before { content: '\201C'; }
-    .review-text::after { content: '\201D'; }
-    .reviewer {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .reviewer-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--green-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #a8d5b0;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-    .reviewer-name {
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    .reviewer-loc {
-      color: rgba(255,255,255,0.4);
-      font-size: 0.78rem;
-      margin-top: 1px;
-    }
+/* Modal */
+#quote-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:1rem}
+#quote-modal.open{display:flex}
+.modal-box{background:#fff;border-radius:8px;width:100%;max-width:540px;max-height:90vh;overflow-y:auto;position:relative}
+.modal-header{padding:28px 28px 0}
+.modal-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#111;margin-bottom:4px}
+.modal-header p{font-size:13px;color:#888;margin-bottom:20px}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#999;line-height:1}
+.modal-body{padding:0 28px 28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-group{margin-bottom:12px}
+.form-group label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#555;display:block;margin-bottom:5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;border:1.5px solid #e0e0e0;border-radius:4px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#c9a84c}
+.form-group textarea{resize:vertical}
+.form-submit{width:100%;padding:14px;background:#111;color:#fff;border:none;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background .2s}
+.form-submit:hover{background:#c9a84c}
+#form-success{display:none;text-align:center;padding:24px;color:#2d7a2d;font-weight:600}
 
-    /* CTA BAND */
-    .cta-band {
-      background: var(--green-dark);
-      padding: 4.5rem 2rem;
-      text-align: center;
-    }
-    .cta-band h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-    .cta-band p {
-      color: rgba(255,255,255,0.7);
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-btns {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .cta-phone {
-      color: #a8d5b0;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
-    }
-    .cta-phone:hover { color: #fff; }
-
-    /* FOOTER */
-    footer {
-      background: #0a0f0a;
-      padding: 3rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #fff;
-    }
-    .footer-info {
-      color: rgba(255,255,255,0.4);
-      font-size: 0.85rem;
-      line-height: 1.7;
-    }
-    .footer-info a {
-      color: #a8d5b0;
-      text-decoration: none;
-    }
-    .footer-copy {
-      color: rgba(255,255,255,0.2);
-      font-size: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .about-badge { right: 1.5rem; }
-      .reviews-grid { grid-template-columns: 1fr; }
-      .trust-inner { grid-template-columns: 1fr; }
-      .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-      .trust-item:last-child { border-bottom: none; }
-    }
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.2rem; }
-      nav.scrolled { padding: 0.8rem 1.2rem; }
-      .nav-links { display: none; }
-      .nav-cta { display: block; }
-      .services-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+@media(max-width:768px){
+  .about{grid-template-columns:1fr}
+  .about-img{height:300px}
+  .trust-bar{gap:40px}
+  .form-row{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+</style>
 </head>
 <body>
 
-  <!-- PROMO BANNER -->
-  <div id="promo-banner">
-    ✨ Free preview by North Star Digital — <a href="https://northstardigital.digital" target="_blank">northstardigital.digital</a>
+<!-- Banner -->
+<div id="top-banner">
+  ✨ Free preview by North Star Digital &mdash; <a href="https://northstardigital.digital" target="_blank">northstardigital.digital</a>
+  <button id="close-banner" onclick="document.getElementById('top-banner').style.display='none';document.querySelector('nav').style.top='0'">×</button>
+</div>
+
+<!-- Nav -->
+<nav id="main-nav">
+  <div class="nav-logo">Union <span>Lawn Services LLC</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="tel:(704) 352-0436" class="nav-phone">(704) 352-0436</a>
+    <a href="#" onclick="openQuote();return false;" class="nav-cta">Free Quote</a>
   </div>
+</nav>
 
-  <!-- NAV -->
-  <nav id="main-nav">
-    <div class="nav-logo">
-      <span>Union Lawn Services LLC</span>
-      <span>Charlotte, NC</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="tel:(704) 352-0436" class="nav-phone">(704) 352-0436</a></li>
-      <li><a class="nav-cta" onclick="openQuote()">Get Free Quote</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-badge">Charlotte's Trusted Lawn Care Professionals</div>
-      <h1>Your Lawn, <em>Perfectly</em><br>Maintained Year-Round</h1>
-      <p>From pristine weekly cuts to full landscape transformations, Union Lawn Services LLC delivers exceptional results for homeowners across the Charlotte area.</p>
-      <div class="hero-btns">
-        <button class="btn-primary" onclick="openQuote()">Get Your Free Quote</button>
-        <a href="tel:(704) 352-0436" class="btn-outline">📞 (704) 352-0436</a>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-arrow"></div>
-    </div>
-  </section>
-
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-inner">
-      <div class="trust-item">
-        <div class="trust-number">8+</div>
-        <div class="trust-label">Years in Business</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-number">1,400+</div>
-        <div class="trust-label">Jobs Completed</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-number">99%</div>
-        <div class="trust-label">Customer Satisfaction</div>
-      </div>
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Charlotte, NC</div>
+    <h1 class="hero-title">Charlotte's Premier Lawn Care Since Day One</h1>
+    <p class="hero-sub">Union Lawn Services LLC delivers reliable, professional landscaping to Charlotte homeowners and businesses every season.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="openQuote()">Get a Free Quote</button>
+      <a href="tel:(704) 352-0436" class="btn-secondary">Call (704) 352-0436</a>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="section-header">
-      <span class="section-tag">What We Do</span>
-      <h2>Comprehensive Lawn &amp; Landscape Services</h2>
-      <p>From routine maintenance to complete landscape design, we handle every aspect of your outdoor space with care and expertise.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-icon">🌿</span>
-        <h3>Lawn Mowing &amp; Edging</h3>
-        <p>Weekly and bi-weekly mowing plans tailored to your lawn's needs. Clean, sharp edges along driveways, sidewalks, and beds for that crisp professional look every visit.</p>
-        <button class="service-link" onclick="openQuote()">Get a Quote →</button>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🌳</span>
-        <h3>Landscape Design &amp; Installation</h3>
-        <p>Transform your yard into a stunning outdoor retreat. We design and install custom planting beds, garden borders, ornamental trees, and shrubs that thrive in Charlotte's climate.</p>
-        <button class="service-link" onclick="openQuote()">Get a Quote →</button>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">✂️</span>
-        <h3>Shrub &amp; Hedge Trimming</h3>
-        <p>Expertly shaped shrubs and hedges elevate your entire curb appeal. We keep your plants healthy, well-formed, and perfectly proportioned all season long.</p>
-        <button class="service-link" onclick="openQuote()">Get a Quote →</button>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🍂</span>
-        <h3>Mulching &amp; Bed Maintenance</h3>
-        <p>Fresh mulch installation improves moisture retention, suppresses weeds, and gives your landscape beds a polished, finished appearance that lasts through the season.</p>
-        <button class="service-link" onclick="openQuote()">Get a Quote →</button>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🍃</span>
-        <h3>Leaf Removal &amp; Seasonal Cleanup</h3>
-        <p>Keep your property looking spotless through every season. Our fall cleanup and spring preparation services ensure your lawn enters each new season in peak condition.</p>
-        <button class="service-link" onclick="openQuote()">Get a Quote →</button>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">💧</span>
-        <h3>Sod Installation &amp; Seeding</h3>
-        <p>Thin or patchy lawn? We offer sod installation and overseeding services to give you a lush, thick turf that stays green and healthy through Charlotte's hot summers.</p>
-        <button class="service-link" onclick="openQuote()">Get a Quote →</button>
-      </div>
-    </div>
-  </section>
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-num">12+</div><div class="trust-label">Years in Business</div></div>
+  <div class="trust-item"><div class="trust-num">800+</div><div class="trust-label">Jobs Completed</div></div>
+  <div class="trust-item"><div class="trust-num">98%</div><div class="trust-label">Satisfaction Rate</div></div>
+</div>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&auto=format&fit=crop&q=80" alt="Professional lawn care team at work in Charlotte">
-        <div class="about-badge">
-          <strong>8+</strong>
-          <span>Years Serving<br>Charlotte</span>
+<!-- Services -->
+<section class="services" id="services">
+  <div class="section-tag">What We Do</div>
+  <h2 class="section-title">Services We Offer</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Lawn Mowing</h3>
+      <p>Professional lawn mowing services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Mulching & Edging</h3>
+      <p>Professional mulching & edging services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Tree & Shrub Trimming</h3>
+      <p>Professional tree & shrub trimming services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Sod Installation</h3>
+      <p>Professional sod installation services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Irrigation Systems</h3>
+      <p>Professional irrigation systems services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Seasonal Cleanup</h3>
+      <p>Professional seasonal cleanup services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-img"></div>
+  <div class="about-text">
+    <div class="section-tag">About Us</div>
+    <h2 class="section-title" style="margin-bottom:24px">Why Charlotte Chooses Us</h2>
+    <p>Union Lawn Services LLC was built on a simple promise: treat every Charlotte lawn like it's our own. From the manicured neighborhoods of Myers Park to the growing communities of Steele Creek, we bring hands-on expertise, top-tier equipment, and genuine pride to every job. We're locally rooted, fully licensed, and deeply committed to keeping Charlotte green, clean, and beautiful year-round.</p>
+    <div class="about-check"><div class="check">✓</div><p>Licensed, insured, and background-checked professionals</p></div>
+    <div class="about-check"><div class="check">✓</div><p>Transparent pricing with no hidden fees</p></div>
+    <div class="about-check"><div class="check">✓</div><p>Same-day and emergency service available</p></div>
+    <div class="about-check"><div class="check">✓</div><p>100% satisfaction guaranteed on every job</p></div>
+    <button class="btn-primary" style="margin-top:28px;width:fit-content" onclick="openQuote()">Schedule a Free Consultation</button>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="section-tag">Testimonials</div>
+  <h2 class="section-title">What Our Clients Say</h2>
+  <p class="reviews-note">Real reviews from Google will appear here upon site launch.</p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Showed up on time, did exactly what they said they would, and the price was fair. I've already recommended them to two of my neighbors."</p>
+      <div class="reviewer">Michael T.</div>
+      <div class="reviewer-loc">Ballantyne, NC</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Best experience I've had with a local service company. Professional from start to finish. Will absolutely use them again."</p>
+      <div class="reviewer">Sarah K.</div>
+      <div class="reviewer-loc">Charlotte, NC</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"They went above and beyond what I expected. The work was done quickly and cleanly. Couldn't be happier with the results."</p>
+      <div class="reviewer">James R.</div>
+      <div class="reviewer-loc">Huntersville, NC</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="section-tag">Get in Touch</div>
+  <h2 class="section-title">Ready to Get Started?</h2>
+  <p>Call us or request a free quote online. We respond within 24 hours.</p>
+  <a href="tel:(704) 352-0436" class="contact-phone">(704) 352-0436</a>
+  <button class="btn-primary" onclick="openQuote()">Request a Free Quote</button>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Union <span>Lawn Services LLC</span></div>
+  <p>(704) 352-0436 &bull; Charlotte, NC</p>
+  <p>© 2026 Union Lawn Services LLC. All rights reserved.</p>
+</footer>
+
+<!-- Quote Modal -->
+<div id="quote-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeQuote()">×</button>
+      <h2>Get Your Free Quote</h2>
+      <p>From Union Lawn Services LLC — we'll get back to you within 24 hours.</p>
+    </div>
+    <div class="modal-body">
+      <form id="quote-form" action="https://formspree.io/f/xgoqjbzp" method="POST">
+        <input type="hidden" name="business" value="Union Lawn Services LLC"/>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" name="first_name" required placeholder="John"/></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" name="last_name" required placeholder="Smith"/></div>
         </div>
-      </div>
-      <div class="about-text">
-        <span class="section-tag">
+        <div class="form-row">
+          <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="john@email.com"/></div>
+          <div class="form-group"><label>Phone *</label><input type="tel" name="phone" required placeholder="(704) 555-0100"/></div>
+        </div>
+        <div class="form-group"><label>Service Address *</label><input type="text" name="address" required placeholder="123 Main St, Charlotte, NC 28277"/></div>
+        <div class="form-row">
+          <div class="form-group"><label>Service Needed *</label>
+            <select name="service" required>
+              <option value="">Select a service...</option>
+              <option>Lawn Mowing</option><option>Mulching & Edging</option><option>Tree & Shrub Trimming</option><option>Sod Installation</option><option>Irrigation Systems</option><option>Seasonal Cleanup</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Property Size</label>
+            <select name="property_size">
+              <option value="">Select size...</option>
+              <option>Under 1/4 acre</option>
+              <option>1/4 – 1/2 acre</option>
+              <option>1/2 – 1 acre</option>
+              <option>Over 1 acre</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label>Job Details</label><textarea name="details" rows="3" placeholder="Describe what you need done..."></textarea></div>
+        <div class="form-group"><label>Best Time to Contact</label>
+          <select name="contact_time">
+            <option value="">No preference</option>
+            <option>Morning (8am–12pm)</option>
+            <option>Afternoon (12pm–5pm)</option>
+            <option>Evening (5pm–8pm)</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit" id="submit-btn">Request My Free Quote</button>
+        <div id="form-success">✓ Request received! We'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('main-nav');
+  if(window.scrollY>60){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}
+});
+
+// Modal
+function openQuote(){document.getElementById('quote-modal').classList.add('open')}
+function closeQuote(){document.getElementById('quote-modal').classList.remove('open')}
+document.getElementById('quote-modal').addEventListener('click',function(e){if(e.target===this)closeQuote()});
+
+// Form submit
+document.getElementById('quote-form').addEventListener('submit',async function(e){
+  e.preventDefault();
+  var btn=document.getElementById('submit-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  var data=new FormData(this);
+  var res=await fetch(this.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
+  if(res.ok){
+    this.style.display='none';
+    document.getElementById('form-success').style.display='block';
+  }else{
+    btn.textContent='Request My Free Quote';btn.disabled=false;
+    alert('Something went wrong. Please call us directly at (704) 352-0436');
+  }
+});
+</script>
+</body>
+</html>
