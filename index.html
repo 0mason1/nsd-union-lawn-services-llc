@@ -29,7 +29,7 @@ nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(12px);top:0;padd
 
 /* Hero */
 #hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');background-size:cover;background-position:center;animation:zoomIn 12s ease-in-out infinite alternate}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.pexels.com/photos/11400234/pexels-photo-11400234.jpeg?auto=compress&cs=tinysrgb&w=1600');background-size:cover;background-position:center;animation:zoomIn 12s ease-in-out infinite alternate}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,rgba(0,0,0,.4) 60%,rgba(0,0,0,.7) 100%)}
 @keyframes zoomIn{from{transform:scale(1)}to{transform:scale(1.07)}}
 .hero-content{position:relative;z-index:2;padding:0 20px;max-width:860px}
@@ -52,17 +52,25 @@ nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(12px);top:0;padd
 .services{padding:90px 5%;background:#fafafa}
 .section-tag{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);color:#111;margin-bottom:48px;max-width:520px}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.service-card{background:#fff;border:1px solid #eee;border-radius:6px;padding:32px;transition:all .25s;cursor:pointer}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.service-card{background:#fff;border:1px solid #eee;border-radius:6px;padding:28px;transition:all .25s;cursor:pointer}
 .service-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.08);transform:translateY(-3px)}
 .service-icon{width:44px;height:44px;background:#c9a84c;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:#fff;font-size:18px}
-.service-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:10px}
-.service-card p{font-size:14px;color:#666;line-height:1.7}
-.service-link{font-size:13px;font-weight:600;color:#c9a84c;margin-top:14px;display:inline-block;letter-spacing:.04em}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:8px}
+.service-card p{font-size:13px;color:#666;line-height:1.65}
+.service-link{font-size:12px;font-weight:600;color:#c9a84c;margin-top:12px;display:inline-block;letter-spacing:.04em}
+
+/* FAQ */
+.faq{padding:90px 5%;background:#fff}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:900px;margin:0 auto}
+.faq-item{padding:24px 28px;border-bottom:1px solid #eee}
+.faq-item:nth-child(odd){border-right:1px solid #eee}
+.faq-q{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#111;margin-bottom:8px}
+.faq-a{font-size:14px;color:#666;line-height:1.7}
 
 /* About */
 .about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
-.about-img{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80');background-size:cover;background-position:center}
+.about-img{background-image:url('https://images.pexels.com/photos/11400234/pexels-photo-11400234.jpeg?auto=compress&cs=tinysrgb&w=1600');background-size:cover;background-position:center}
 .about-text{padding:80px 6%;display:flex;flex-direction:column;justify-content:center;background:#fff}
 .about-text p{font-size:15px;color:#555;line-height:1.85;margin-bottom:16px}
 .about-check{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
@@ -89,10 +97,16 @@ nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(12px);top:0;padd
 .contact-phone:hover{color:#c9a84c}
 
 /* Footer */
-footer{background:#0a0a0a;padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.footer-logo{font-family:'Playfair Display',serif;font-size:18px;color:#fff;font-weight:700}
+footer{background:#0a0a0a;padding:60px 5% 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-logo{font-family:'Playfair Display',serif;font-size:20px;color:#fff;font-weight:700;margin-bottom:12px}
 .footer-logo span{color:#c9a84c}
-footer p{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;max-width:260px}
+.footer-col h4{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#c9a84c;margin-bottom:16px}
+.footer-col a,.footer-col p{font-size:13px;color:rgba(255,255,255,.5);display:block;margin-bottom:8px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
 
 /* Modal */
 #quote-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:1rem}
@@ -119,6 +133,10 @@ footer p{font-size:12px;color:rgba(255,255,255,.3)}
   .trust-bar{gap:40px}
   .form-row{grid-template-columns:1fr}
   .nav-links{display:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .faq-grid{grid-template-columns:1fr}
+  .faq-item:nth-child(odd){border-right:none}
+  .footer-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -148,8 +166,8 @@ footer p{font-size:12px;color:rgba(255,255,255,.3)}
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-tag">Charlotte, NC</div>
-    <h1 class="hero-title">Charlotte's Premier Lawn Care Since Day One</h1>
-    <p class="hero-sub">Union Lawn Services LLC delivers reliable, professional landscaping to Charlotte homeowners and businesses every season.</p>
+    <h1 class="hero-title">Charlotte's Premier Lawn Care, Done Right Every Time</h1>
+    <p class="hero-sub">Union Lawn Services LLC delivers reliable, professional landscaping solutions trusted by Charlotte homeowners and businesses alike.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="openQuote()">Get a Free Quote</button>
       <a href="tel:(704) 352-0436" class="btn-secondary">Call (704) 352-0436</a>
@@ -172,32 +190,42 @@ footer p{font-size:12px;color:rgba(255,255,255,.3)}
     <div class="service-card">
       <div class="service-icon">✦</div>
       <h3>Lawn Mowing</h3>
-      <p>Professional lawn mowing services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <p>Fast, reliable lawn mowing for homes and businesses across Charlotte.</p>
       <span class="service-link" onclick="openQuote()">Get a Quote →</span>
     </div><div class="service-card">
       <div class="service-icon">✦</div>
       <h3>Mulching & Edging</h3>
-      <p>Professional mulching & edging services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <p>Our team handles all mulching & edging needs with care and precision.</p>
       <span class="service-link" onclick="openQuote()">Get a Quote →</span>
     </div><div class="service-card">
       <div class="service-icon">✦</div>
       <h3>Tree & Shrub Trimming</h3>
-      <p>Professional tree & shrub trimming services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <p>Trusted tree & shrub trimming done right the first time, every time.</p>
       <span class="service-link" onclick="openQuote()">Get a Quote →</span>
     </div><div class="service-card">
       <div class="service-icon">✦</div>
       <h3>Sod Installation</h3>
-      <p>Professional sod installation services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <p>From small repairs to full sod installation projects — we do it all.</p>
       <span class="service-link" onclick="openQuote()">Get a Quote →</span>
     </div><div class="service-card">
       <div class="service-icon">✦</div>
       <h3>Irrigation Systems</h3>
-      <p>Professional irrigation systems services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <p>Quality irrigation systems at competitive prices, no hidden fees.</p>
       <span class="service-link" onclick="openQuote()">Get a Quote →</span>
     </div><div class="service-card">
       <div class="service-icon">✦</div>
       <h3>Seasonal Cleanup</h3>
-      <p>Professional seasonal cleanup services for residential and commercial properties throughout Charlotte and surrounding areas.</p>
+      <p>Expert seasonal cleanup with a satisfaction guarantee.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Fertilization</h3>
+      <p>Same-day fertilization available for urgent needs.</p>
+      <span class="service-link" onclick="openQuote()">Get a Quote →</span>
+    </div><div class="service-card">
+      <div class="service-icon">✦</div>
+      <h3>Landscape Design</h3>
+      <p>Professional landscape design serving all of Charlotte and surrounding areas.</p>
       <span class="service-link" onclick="openQuote()">Get a Quote →</span>
     </div>
   </div>
@@ -205,11 +233,11 @@ footer p{font-size:12px;color:rgba(255,255,255,.3)}
 
 <!-- About -->
 <section class="about" id="about">
-  <div class="about-img"></div>
+  <div class="about-img" style="background-image:url('https://images.pexels.com/photos/27135591/pexels-photo-27135591.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div>
   <div class="about-text">
     <div class="section-tag">About Us</div>
     <h2 class="section-title" style="margin-bottom:24px">Why Charlotte Chooses Us</h2>
-    <p>Union Lawn Services LLC was built on a simple promise: treat every Charlotte lawn like it's our own. From the manicured neighborhoods of Myers Park to the growing communities of Steele Creek, we bring hands-on expertise, top-tier equipment, and genuine pride to every job. We're locally rooted, fully licensed, and deeply committed to keeping Charlotte green, clean, and beautiful year-round.</p>
+    <p>Union Lawn Services LLC was built on a simple promise: to treat every Charlotte lawn like it's our own. From the humid summers of the Piedmont to the mild winters that keep our grass growing year-round, we understand the unique demands of maintaining a beautiful yard in the Carolinas. Our locally rooted team combines hands-on expertise with a genuine commitment to the neighborhoods we serve, ensuring every property we touch reflects the pride and care our community deserves.</p>
     <div class="about-check"><div class="check">✓</div><p>Licensed, insured, and background-checked professionals</p></div>
     <div class="about-check"><div class="check">✓</div><p>Transparent pricing with no hidden fees</p></div>
     <div class="about-check"><div class="check">✓</div><p>Same-day and emergency service available</p></div>
@@ -254,11 +282,63 @@ footer p{font-size:12px;color:rgba(255,255,255,.3)}
   <button class="btn-primary" onclick="openQuote()">Request a Free Quote</button>
 </section>
 
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div style="text-align:center;margin-bottom:48px">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title" style="margin:0 auto">Common Questions</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q">Are you licensed and insured?</div>
+      <div class="faq-a">Yes. We are fully licensed and insured in North Carolina. We carry general liability and workers' compensation on every job.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you offer free estimates?</div>
+      <div class="faq-a">Absolutely. We provide free, no-obligation estimates for all services. Just fill out the quote form or give us a call.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How quickly can you schedule service?</div>
+      <div class="faq-a">We typically schedule within 24-48 hours. For emergencies, we offer same-day service when available.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What areas do you serve?</div>
+      <div class="faq-a">We serve Charlotte and the surrounding areas including Ballantyne, Huntersville, Concord, Mooresville, and Matthews.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What payment methods do you accept?</div>
+      <div class="faq-a">We accept cash, check, and all major credit cards. Payment is due upon completion of the job.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you guarantee your work?</div>
+      <div class="faq-a">Yes. We stand behind every job with a 100% satisfaction guarantee. If you're not happy, we'll make it right.</div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
-  <div class="footer-logo">Union <span>Lawn Services LLC</span></div>
-  <p>(704) 352-0436 &bull; Charlotte, NC</p>
-  <p>© 2026 Union Lawn Services LLC. All rights reserved.</p>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Union <span>Lawn Services LLC</span></div>
+      <p class="footer-desc">Serving Charlotte and surrounding areas with professional landscaping services you can count on.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#" onclick="openQuote();return false;">Lawn Mowing</a><a href="#" onclick="openQuote();return false;">Mulching & Edging</a><a href="#" onclick="openQuote();return false;">Tree & Shrub Trimming</a><a href="#" onclick="openQuote();return false;">Sod Installation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:(704) 352-0436">(704) 352-0436</a>
+      <p>Charlotte, NC</p>
+      <p>Mon–Sat: 7am–7pm</p>
+      <p>Emergency: 24/7</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Union Lawn Services LLC. All rights reserved.</p>
+    <p>Licensed & Insured in North Carolina</p>
+  </div>
 </footer>
 
 <!-- Quote Modal -->
@@ -285,7 +365,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.3)}
           <div class="form-group"><label>Service Needed *</label>
             <select name="service" required>
               <option value="">Select a service...</option>
-              <option>Lawn Mowing</option><option>Mulching & Edging</option><option>Tree & Shrub Trimming</option><option>Sod Installation</option><option>Irrigation Systems</option><option>Seasonal Cleanup</option>
+              <option>Lawn Mowing</option><option>Mulching & Edging</option><option>Tree & Shrub Trimming</option><option>Sod Installation</option><option>Irrigation Systems</option><option>Seasonal Cleanup</option><option>Fertilization</option><option>Landscape Design</option>
               <option>Other</option>
             </select>
           </div>
@@ -343,5 +423,18 @@ document.getElementById('quote-form').addEventListener('submit',async function(e
   }
 });
 </script>
+
+<!-- Floating Call Button -->
+<style>
+#float-call{position:fixed;bottom:24px;right:24px;z-index:9998;display:flex;align-items:center;gap:10px;background:#c9a84c;color:#fff;padding:14px 22px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;letter-spacing:.04em;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:all .2s}
+#float-call:hover{background:#b8933d;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.3)}
+#float-call svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
+@media(min-width:769px){#float-call{display:none}}
+</style>
+<a id="float-call" href="tel:(704) 352-0436">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.5 11.5 0 003.59.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.5 11.5 0 00.57 3.59 1 1 0 01-.25 1.01l-2.2 2.19z"/></svg>
+  Call Now
+</a>
+
 </body>
 </html>
